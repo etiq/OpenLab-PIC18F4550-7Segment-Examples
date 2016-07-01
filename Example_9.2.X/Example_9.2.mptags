@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+CONFIG_H	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\config.h	13;"	d	line:13
+COUNTER_H	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\counter.h	12;"	d	line:12
+DELAY__H	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.h	12;"	d	line:12
+DelayFor18TCY	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	8;"	f	line:8	signature:( void )
+DelayPORXLCD	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	16;"	f	line:16	signature:(void)
+DelayXLCD	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	25;"	f	line:25	signature:(void)
+Delay_s	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	44;"	f	line:44	signature:(unsigned char t)
+Delay_s	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.h	24;"	p	line:24	signature:(unsigned char t)
+Delay_s_	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	53;"	f	line:53	signature:(void)
+Delay_s_	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.h	32;"	p	line:32	signature:(void)
+Num1	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\main.c	47;"	v	line:47
+Num2	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\main.c	47;"	v	line:47
+Num3	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\main.c	47;"	v	line:47
+Num4	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\main.c	47;"	v	line:47
+NumDisplay	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	61;"	f	line:61	signature:(char Number, unsigned char Segment )
+NumDisplay	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.h	16;"	p	line:16	signature:(char Number, unsigned char Segment )
+OUTPUT0::PORTD=0b11000000	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	19;"	d	line:19	file:
+OUTPUT1::PORTD=0b11111001	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	20;"	d	line:20	file:
+OUTPUT2::PORTD=0b10100100	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	21;"	d	line:21	file:
+OUTPUT3::PORTD=0b10110000	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	22;"	d	line:22	file:
+OUTPUT4::PORTD=0b10011001	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	23;"	d	line:23	file:
+OUTPUT5::PORTD=0b10010010	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	24;"	d	line:24	file:
+OUTPUT6::PORTD=0b10000010	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	25;"	d	line:25	file:
+OUTPUT7::PORTD=0b11111000	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	26;"	d	line:26	file:
+OUTPUT8::PORTD=0b10000000	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	27;"	d	line:27	file:
+OUTPUT9::PORTD=0b10010000	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	28;"	d	line:28	file:
+SEGMENT_H	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.h	12;"	d	line:12
+Segment_1::PORTAbits.RA0	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	30;"	d	line:30	file:
+Segment_1_dir::TRISAbits.TRISA0	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	35;"	d	line:35	file:
+Segment_2::PORTAbits.RA1	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	31;"	d	line:31	file:
+Segment_2_dir::TRISAbits.TRISA1	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	36;"	d	line:36	file:
+Segment_3::PORTAbits.RA2	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	32;"	d	line:32	file:
+Segment_3_dir::TRISAbits.TRISA2	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	37;"	d	line:37	file:
+Segment_4::PORTAbits.RA3	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	33;"	d	line:33	file:
+Segment_4_dir::TRISAbits.TRISA3	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	38;"	d	line:38	file:
+Segment_init	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.c	40;"	f	line:40	signature:(unsigned char Segment)
+Segment_init	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\segment.h	28;"	p	line:28	signature:(unsigned char Segment)
+Seq_count	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\counter.c	11;"	f	line:11	signature:(unsigned char*ptr1, unsigned char*ptr2, unsigned char*ptr3, unsigned char*ptr4)
+Seq_count	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\counter.h	16;"	p	line:16	signature:(unsigned char*ptr1, unsigned char*ptr2, unsigned char*ptr3, unsigned char*ptr4)
+delay_ms	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	33;"	f	line:33	signature:(unsigned char t)
+delay_ms	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.h	14;"	p	line:14	signature:(unsigned char t)
+i	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	10;"	l	line:10
+i	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	27;"	l	line:27
+i	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	35;"	l	line:35
+i	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	46;"	l	line:46
+j	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\delay.c	46;"	l	line:46
+main	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\main.c	49;"	f	line:49	signature:(void)
+x	C:\Users\tbi\Dropbox\Sunil Kumar_shared\CODE_Examples_C18_XC8_compatable\SEVEN SEGMENT DISPLAY\Example_9.2.X\main.c	53;"	l	line:53

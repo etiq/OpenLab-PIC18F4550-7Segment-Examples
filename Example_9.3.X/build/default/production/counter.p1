@@ -1,0 +1,83 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"13 counter.c
+[v _Seq_count `(v ~T0 @X0 1 ef4`*uc`*uc`*uc`*uc ]
+"14
+{
+[; ;counter.c: 13: void Seq_count(unsigned char*ptr1, unsigned char*ptr2, unsigned char*ptr3, unsigned char*ptr4)
+[; ;counter.c: 14: {
+[e :U _Seq_count ]
+"13
+[v _ptr1 `*uc ~T0 @X0 1 r1 ]
+[v _ptr2 `*uc ~T0 @X0 1 r2 ]
+[v _ptr3 `*uc ~T0 @X0 1 r3 ]
+[v _ptr4 `*uc ~T0 @X0 1 r4 ]
+"14
+[f ]
+[; ;counter.c: 15: ++*ptr1;
+"15
+[e =+ *U _ptr1 -> -> 1 `i `uc ]
+[; ;counter.c: 16: if(*ptr1==10)
+"16
+[e $ ! == -> *U _ptr1 `i -> 10 `i 2  ]
+[; ;counter.c: 17: {
+"17
+{
+[; ;counter.c: 18: ++*ptr2;
+"18
+[e =+ *U _ptr2 -> -> 1 `i `uc ]
+[; ;counter.c: 19: *ptr1 = 0;
+"19
+[e = *U _ptr1 -> -> 0 `i `uc ]
+[; ;counter.c: 20: if(*ptr2 == 10)
+"20
+[e $ ! == -> *U _ptr2 `i -> 10 `i 3  ]
+[; ;counter.c: 21: {
+"21
+{
+[; ;counter.c: 22: ++*ptr3;
+"22
+[e =+ *U _ptr3 -> -> 1 `i `uc ]
+[; ;counter.c: 23: *ptr2=0;
+"23
+[e = *U _ptr2 -> -> 0 `i `uc ]
+[; ;counter.c: 24: if(*ptr3 == 10)
+"24
+[e $ ! == -> *U _ptr3 `i -> 10 `i 4  ]
+[; ;counter.c: 25: {
+"25
+{
+[; ;counter.c: 26: ++*ptr4;
+"26
+[e =+ *U _ptr4 -> -> 1 `i `uc ]
+[; ;counter.c: 27: *ptr3=0;
+"27
+[e = *U _ptr3 -> -> 0 `i `uc ]
+[; ;counter.c: 28: if(*ptr4==10)
+"28
+[e $ ! == -> *U _ptr4 `i -> 10 `i 5  ]
+[; ;counter.c: 29: {
+"29
+{
+[; ;counter.c: 30: *ptr4=0;
+"30
+[e = *U _ptr4 -> -> 0 `i `uc ]
+"31
+}
+[e :U 5 ]
+"33
+}
+[e :U 4 ]
+"35
+}
+[e :U 3 ]
+"37
+}
+[e :U 2 ]
+[; ;counter.c: 31: }
+[; ;counter.c: 33: }
+[; ;counter.c: 35: }
+[; ;counter.c: 37: }
+[; ;counter.c: 39: }
+"39
+[e :UE 1 ]
+}

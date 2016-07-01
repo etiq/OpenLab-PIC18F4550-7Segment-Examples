@@ -1,0 +1,8 @@
+_Segment_init: CODE, 32330 0 52
+_main: CODE, 32498 0 124
+__initialization: CODE, 32288 0 32
+_Delay_s_: CODE, 32258 0 8
+_NumDisplay: CODE, 32382 0 116
+_Delay10KTCYx: CODE, 32266 0 22
+_Seq_count: CODE, 32622 0 146
+Total: 500

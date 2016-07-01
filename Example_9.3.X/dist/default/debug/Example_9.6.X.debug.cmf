@@ -1,0 +1,871 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+end_init CODE 0 14 14 4 1
+reset_vec CODE 0 0 0 4 1
+idloc IDLOC 0 200000 200000 8 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/debug\Example_9.6.X.debug.obj
+intcode CODE 0 8 8 C 1
+smallconst SMALLCONST 0 800 800 C 1
+text25 CODE 0 11EC 11EC 1A 1
+text24 CODE 0 1234 1234 16 1
+text23 CODE 0 1268 1268 E 1
+text22 CODE 0 1110 1110 32 1
+text21 CODE 0 B74 B74 E4 1
+text20 CODE 0 116A 116A 28 1
+text19 CODE 0 E5E E5E 92 1
+text18 CODE 0 94E 94E 142 1
+text17 CODE 0 1192 1192 26 1
+text16 CODE 0 D12 D12 BA 1
+text15 CODE 0 1068 1068 3E 1
+intcode_body CODE 0 EF0 EF0 88 1
+text13 CODE 0 C58 C58 BA 1
+text12 CODE 0 11D2 11D2 1A 1
+text11 CODE 0 10DE 10DE 32 1
+text10 CODE 0 A90 A90 E4 1
+text9 CODE 0 1142 1142 28 1
+text8 CODE 0 121E 121E 16 1
+text7 CODE 0 125A 125A E 1
+text6 CODE 0 DCC DCC 92 1
+text5 CODE 0 80C 80C 142 1
+text4 CODE 0 102A 102A 3E 1
+text3 CODE 0 1276 1276 C 1
+text2 CODE 0 F78 F78 5C 1
+text1 CODE 0 124A 124A 10 1
+text0 CODE 0 10A6 10A6 38 1
+cstackCOMRAM COMRAM 1 1 1 2E 1
+dataBANK0 BANK0 1 60 60 17 1
+dataCOMRAM COMRAM 1 2F 2F 1A 1
+bssCOMRAM COMRAM 1 49 49 13 1
+cinit CODE 0 FD4 FD4 56 1
+idataCOMRAM CODE 0 11B8 11B8 1A 1
+idataBANK0 CODE 0 1206 1206 17 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 000077-0000FF 1
+BANK1 000100-0001FF 1
+BANK2 000200-0002FF 1
+BANK3 000300-0003FF 1
+BANK4 000400-0004FF 1
+BANK5 000500-0005FF 1
+BANK6 000600-0006FF 1
+BANK7 000700-0007FF 1
+BIGRAM 00005C-00005F 1
+BIGRAM 000077-0007FF 1
+CODE 000004-000007 1
+CODE 000018-0007FF 1
+CODE 00121D-00121D 1
+CODE 001282-007FFF 1
+COMRAM 00005C-00005F 1
+CONST 000004-000007 1
+CONST 000018-0007FF 1
+CONST 00121D-00121D 1
+CONST 001282-007FFF 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 00121D-00121D 1
+MEDIUMCONST 001282-007FFF 1
+RAM 000077-0007FF 1
+SFR 000F60-000FFF 1
+SMALLCONST 00121D-00121D 1
+SMALLCONST 001282-007FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\Example_9.6.X.debug.obj
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":70 80C text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":71 814 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":73 858 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":74 864 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":75 866 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":77 8AE text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":79 8BA text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":80 8C2 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":82 8C4 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":83 8D4 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":84 8D8 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":85 8E8 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":86 8EC text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":87 8FC text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":88 900 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":89 910 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":90 914 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":80 918 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":92 928 text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":93 94C text5 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":70 94E text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":71 956 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":73 99A text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":74 9A6 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":75 9A8 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":77 9F0 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":79 9FC text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":80 A04 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":82 A06 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":83 A16 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":84 A1A text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":85 A2A text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":86 A2E text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":87 A3E text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":88 A42 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":89 A52 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":90 A56 text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":80 A5A text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":92 A6A text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":93 A8E text18 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":82 A90 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":87 A98 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":90 A9C text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":93 AA0 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":96 AA4 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":99 AA8 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":102 AAC text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":105 AB0 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":108 AB4 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":111 AB8 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":114 ABC text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":115 AC0 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":84 AC2 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":118 B00 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":119 B08 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":126 B0A text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":129 B0E text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":132 B12 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":135 B16 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":138 B1A text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":141 B1E text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":144 B22 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":147 B26 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":150 B2A text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":153 B2E text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":154 B32 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":123 B34 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":157 B72 text10 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":82 B74 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":87 B7C text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":90 B80 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":93 B84 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":96 B88 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":99 B8C text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":102 B90 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":105 B94 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":108 B98 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":111 B9C text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":114 BA0 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":115 BA4 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":84 BA6 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":118 BE4 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":119 BEC text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":126 BEE text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":129 BF2 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":132 BF6 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":135 BFA text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":138 BFE text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":141 C02 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":144 C06 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":147 C0A text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":150 C0E text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":153 C12 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":154 C16 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":123 C18 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":157 C56 text21 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":45 C58 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":46 C80 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":47 C84 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":48 C88 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":49 CB0 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":50 CB4 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":51 CB8 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":52 CE0 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":53 CE4 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":54 CE8 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":55 D10 text13 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":45 D12 text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":46 D3A text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":47 D3E text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":48 D42 text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":49 D6A text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":50 D6E text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":51 D72 text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":52 D9A text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":53 D9E text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":54 DA2 text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":55 DCA text16 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":13 DCC text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":14 DD6 text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":16 DE4 text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":17 DEE text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":18 DFA text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":20 E08 text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":21 E12 text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":22 E1E text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":24 E2C text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":25 E36 text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":26 E42 text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":28 E50 text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":37 E5C text6 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":13 E5E text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":14 E68 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":16 E76 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":17 E80 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":18 E8C text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":20 E9A text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":21 EA4 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":22 EB0 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":24 EBE text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":25 EC8 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":26 ED4 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":28 EE2 text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\counter.c":37 EEE text19 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":125 EF0 intcode_body CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":126 F22 intcode_body CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":128 F2A intcode_body CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":129 F2E intcode_body CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":130 F3A intcode_body CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":132 F3E intcode_body CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":75 F78 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":76 F7C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":78 F80 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":79 F82 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":81 F84 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":83 F88 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":84 F8A text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":87 F8C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":88 F8E text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":90 F90 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":91 F94 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":93 F98 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":95 F9A text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":96 F9C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":98 F9E text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":100 FA0 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":101 FA2 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":103 FA4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":104 FA8 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":106 FAC text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":108 FAE text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":110 FB0 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":111 FB4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":113 FB8 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":115 FBA text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":116 FBE text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":118 FC2 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":119 FC4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":137 FC6 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":138 FCA text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":139 FD0 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\plib\USART\uopen.c":143 FD2 text2 CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1810 FD4 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1811 FD8 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1813 FDA cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1814 FDC cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1815 FDE cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1820 FE0 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1821 FE2 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1822 FE4 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1823 FE6 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1824 FE8 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1825 FEA cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1826 FEC cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1827 FF0 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1829 FF4 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1830 FF6 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1831 FFA cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1832 FFC cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1833 FFE cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1837 1000 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1838 1002 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1839 1004 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1840 1006 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1841 1008 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1842 100A cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1843 100C cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1844 1010 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1846 1014 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1847 1016 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1848 101A cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1849 101C cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1850 101E cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1858 1020 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1859 1022 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1860 1024 cinit CODE
+"C:\Users\tbi\AppData\Local\Temp\s1n0.":1861 1026 cinit CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":101 102A text4 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":106 1032 text4 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":110 1046 text4 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":111 104E text4 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":112 1062 text4 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":113 1066 text4 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":101 1068 text15 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":106 1070 text15 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":110 1084 text15 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":111 108C text15 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":112 10A0 text15 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":113 10A4 text15 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":140 10A6 text0 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":141 10AE text0 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":142 10B0 text0 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":143 10B8 text0 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":145 10C8 text0 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":146 10D4 text0 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":149 10D8 text0 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":62 10DE text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":63 10E2 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":64 10E4 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":65 10E6 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":66 10E8 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":69 10EA text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":70 10F0 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":71 10F4 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":72 10FC text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":73 1100 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":74 1108 text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":76 110C text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":77 110E text11 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":62 1110 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":63 1114 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":64 1116 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":65 1118 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":66 111A text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":69 111C text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":70 1122 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":71 1126 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":72 112E text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":73 1132 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":74 113A text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":76 113E text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":77 1140 text22 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":163 1142 text9 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":164 114A text9 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":165 1152 text9 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":167 1158 text9 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":168 1160 text9 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":169 1168 text9 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":163 116A text20 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":164 1172 text20 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":165 117A text20 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":167 1180 text20 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":168 1188 text20 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\segment.c":169 1190 text20 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":96 1192 text17 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":97 11B2 text17 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":98 11B6 text17 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":59 11D2 text12 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":61 11D4 text12 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":62 11D6 text12 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":63 11D8 text12 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":64 11DA text12 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":59 11DC text12 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":66 11EA text12 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":59 11EC text25 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":61 11EE text25 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":62 11F0 text25 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":63 11F2 text25 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":64 11F4 text25 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":59 11F6 text25 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":66 1204 text25 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10ktcyx.c":11 121E text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10ktcyx.c":12 122E text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10ktcyx.c":13 1232 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10ktcyx.c":11 1234 text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10ktcyx.c":12 1244 text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\d10ktcyx.c":13 1248 text24 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\uart_1.c":20 124A text1 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\uart_1.c":21 1258 text1 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\delay.c":49 125A text7 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\delay.c":51 1266 text7 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\delay.c":49 1268 text23 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\delay.c":51 1274 text23 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":116 1276 text3 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":117 1278 text3 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":118 127A text3 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":119 127C text3 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":120 127E text3 CODE
+"C:\Users\tbi\Dropbox\workstation\TESTING_SAMPLE_CODES\7_SEGMENT_DISPLAY\Example_9.6.X\main.c":121 1280 text3 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_of_OpenUSART FD4 0 CODE 0 text2 dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Segment_init 1110 0 CODE 0 text11 dist/default/debug\Example_9.6.X.debug.obj
+__S0 30000E 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__S1 77 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/debug\Example_9.6.X.debug.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/debug\Example_9.6.X.debug.obj
+i2DisplayValue@Number 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2NumDisplay@Segment 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_dot 4A 0 COMRAM 1 bssCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_str 4B 0 COMRAM 1 bssCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__CFG_PLLDIV$5 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_RCIE 7CED 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Delay10KTCYx 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_PEIE 7F96 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_RCIF 7CF5 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+Seq_count@ptr4 24 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_Num1 45 0 COMRAM 1 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_RCIP 7CFD 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_Num2 46 0 COMRAM 1 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_Num3 47 0 COMRAM 1 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_Num4 48 0 COMRAM 1 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_str2 60 0 BANK0 1 dataBANK0 dist/default/debug\Example_9.6.X.debug.obj
+_str3 2F 0 COMRAM 1 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2Switch_Relay@sw 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_main 10A6 0 CODE 0 text0 dist/default/debug\Example_9.6.X.debug.obj
+start 14 0 CODE 0 init C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+i2Display@ptr C 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_Segment_init 10DE 0 CODE 0 text11 dist/default/debug\Example_9.6.X.debug.obj
+_Delay_s_ 125A 0 CODE 0 text7 dist/default/debug\Example_9.6.X.debug.obj
+_Format_DEC C58 0 CODE 0 text13 dist/default/debug\Example_9.6.X.debug.obj
+_RCREG FAE 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_RCSTA FAB 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_TXREG FAD 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_TRISD F95 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_SPBRG FAF 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/debug\Example_9.6.X.debug.obj
+_TXSTA FAC 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/debug\Example_9.6.X.debug.obj
+__HRAM 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_PORTD F83 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__LRAM 1 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/debug\Example_9.6.X.debug.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/debug\Example_9.6.X.debug.obj
+Display@x 27 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2Format_DEC@q 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2Seq_count@ptr1 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/debug\Example_9.6.X.debug.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/debug\Example_9.6.X.debug.obj
+__Hrparam 0 0 ABS 0 rparam dist/default/debug\Example_9.6.X.debug.obj
+__Lrparam 0 0 ABS 0 rparam dist/default/debug\Example_9.6.X.debug.obj
+__Hram 0 0 ABS 0 ram dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Format_DEC DCC 0 CODE 0 text16 dist/default/debug\Example_9.6.X.debug.obj
+__Lram 0 0 ABS 0 ram dist/default/debug\Example_9.6.X.debug.obj
+__Hcomram 0 0 ABS 0 comram dist/default/debug\Example_9.6.X.debug.obj
+__Lcomram 0 0 ABS 0 comram dist/default/debug\Example_9.6.X.debug.obj
+NumDisplay@Number 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/debug\Example_9.6.X.debug.obj
+_DisplayValue A90 0 CODE 0 text10 dist/default/debug\Example_9.6.X.debug.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/debug\Example_9.6.X.debug.obj
+__end_of__stringdata 80A 0 SMALLCONST 0 smallconst dist/default/debug\Example_9.6.X.debug.obj
+__Hbss 0 0 RAM 1 bss dist/default/debug\Example_9.6.X.debug.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Lbss 0 0 RAM 1 bss dist/default/debug\Example_9.6.X.debug.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Example_9.6.X.debug.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Example_9.6.X.debug.obj
+?i2_DisplayValue 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_array 55 0 COMRAM 1 bssCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Display 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Format_DEC 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_PIE1bits F9D 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Example_9.6.X.debug.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Example_9.6.X.debug.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Reset_TIME 11B8 0 CODE 0 text17 dist/default/debug\Example_9.6.X.debug.obj
+?_Segment_init 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_LATBbits F8A 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Example_9.6.X.debug.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Example_9.6.X.debug.obj
+__size_of_NumDisplay 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+?_Format_DEC 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Example_9.6.X.debug.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Example_9.6.X.debug.obj
+i2Seq_count@ptr4 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Hintret 0 0 ABS 0 intret dist/default/debug\Example_9.6.X.debug.obj
+__Lintret 0 0 ABS 0 intret dist/default/debug\Example_9.6.X.debug.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/debug\Example_9.6.X.debug.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/debug\Example_9.6.X.debug.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug\Example_9.6.X.debug.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug\Example_9.6.X.debug.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Example_9.6.X.debug.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Example_9.6.X.debug.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Example_9.6.X.debug.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Example_9.6.X.debug.obj
+i2_Set_TIME 1068 0 CODE 0 text15 dist/default/debug\Example_9.6.X.debug.obj
+_SPBRGH FB0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\Example_9.6.X.debug.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Set_TIME 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hintcode 14 0 CODE 0 intcode dist/default/debug\Example_9.6.X.debug.obj
+__Lintcode 8 0 CODE 0 intcode dist/default/debug\Example_9.6.X.debug.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug\Example_9.6.X.debug.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug\Example_9.6.X.debug.obj
+_Reset_TIME 1192 0 CODE 0 text17 dist/default/debug\Example_9.6.X.debug.obj
+__pintcode 8 0 CODE 0 intcode dist/default/debug\Example_9.6.X.debug.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/debug\Example_9.6.X.debug.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Seq_count EF0 0 CODE 0 text19 dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Seq_count 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Example_9.6.X.debug.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Example_9.6.X.debug.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+i2_NumDisplay 116A 0 CODE 0 text20 dist/default/debug\Example_9.6.X.debug.obj
+_Delay10KTCYx 121E 0 CODE 0 text8 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Switch_Relay 11EC 0 CODE 0 text12 dist/default/debug\Example_9.6.X.debug.obj
+DisplayValue@Number 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Display A90 0 CODE 0 text18 dist/default/debug\Example_9.6.X.debug.obj
+__Hdata 0 0 ABS 0 data dist/default/debug\Example_9.6.X.debug.obj
+__Ldata 0 0 ABS 0 data dist/default/debug\Example_9.6.X.debug.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Rx_isr 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+?_DisplayValue 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/debug\Example_9.6.X.debug.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/debug\Example_9.6.X.debug.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug\Example_9.6.X.debug.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug\Example_9.6.X.debug.obj
+__CFG_BOR$ON 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__size_of_DisplayValue 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hinit 14 0 CODE 0 init dist/default/debug\Example_9.6.X.debug.obj
+__Linit 14 0 CODE 0 init dist/default/debug\Example_9.6.X.debug.obj
+__Hintcodelo 14 0 CODE 0 intcodelo dist/default/debug\Example_9.6.X.debug.obj
+__Lintcodelo 14 0 CODE 0 intcodelo dist/default/debug\Example_9.6.X.debug.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug\Example_9.6.X.debug.obj
+__end_of_main 10DE 0 CODE 0 text0 dist/default/debug\Example_9.6.X.debug.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug\Example_9.6.X.debug.obj
+_Rx_isr 8 0 CODE 0 intcode dist/default/debug\Example_9.6.X.debug.obj
+__Htext 0 0 ABS 0 text dist/default/debug\Example_9.6.X.debug.obj
+__Ltext 0 0 ABS 0 text dist/default/debug\Example_9.6.X.debug.obj
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/debug\Example_9.6.X.debug.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__pdataBANK0 60 0 BANK0 1 dataBANK0 dist/default/debug\Example_9.6.X.debug.obj
+end_of_initialization 1020 0 CODE 0 cinit dist/default/debug\Example_9.6.X.debug.obj
+OpenUSART@spbrg 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+Delay10KTCYx@unit 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+i2_Segment_init 1110 0 CODE 0 text22 dist/default/debug\Example_9.6.X.debug.obj
+_TRISAbits F92 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_RCSTAbits FAB 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_TRISBbits F93 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_TRISCbits F94 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_PORTAbits F80 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_TXSTAbits FAC 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+Set_TIME@str 2B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2_Delay_s_ 1268 0 CODE 0 text23 dist/default/debug\Example_9.6.X.debug.obj
+i2_Format_DEC D12 0 CODE 0 text16 dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Delay10KTCYx 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Set_TIME 10A6 0 CODE 0 text15 dist/default/debug\Example_9.6.X.debug.obj
+?i2_Set_TIME E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\Example_9.6.X.debug.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug\Example_9.6.X.debug.obj
+i2_Display 94E 0 CODE 0 text18 dist/default/debug\Example_9.6.X.debug.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug\Example_9.6.X.debug.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug\Example_9.6.X.debug.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/debug\Example_9.6.X.debug.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/debug\Example_9.6.X.debug.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/debug\Example_9.6.X.debug.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/debug\Example_9.6.X.debug.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/debug\Example_9.6.X.debug.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug\Example_9.6.X.debug.obj
+__Hpowerup 14 0 CODE 0 powerup dist/default/debug\Example_9.6.X.debug.obj
+__Lpowerup 14 0 CODE 0 powerup dist/default/debug\Example_9.6.X.debug.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug\Example_9.6.X.debug.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug\Example_9.6.X.debug.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug\Example_9.6.X.debug.obj
+__Htext0 0 0 ABS 0 text0 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/debug\Example_9.6.X.debug.obj
+_Seq_count DCC 0 CODE 0 text6 dist/default/debug\Example_9.6.X.debug.obj
+__Htext1 0 0 ABS 0 text1 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Format_DEC D12 0 CODE 0 text13 dist/default/debug\Example_9.6.X.debug.obj
+__ptext0 10A6 0 CODE 0 text0 dist/default/debug\Example_9.6.X.debug.obj
+__Htext2 0 0 ABS 0 text2 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/debug\Example_9.6.X.debug.obj
+__ptext1 124A 0 CODE 0 text1 dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Segment_init 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Htext3 0 0 ABS 0 text3 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/debug\Example_9.6.X.debug.obj
+__ptext2 F78 0 CODE 0 text2 dist/default/debug\Example_9.6.X.debug.obj
+__Htext4 0 0 ABS 0 text4 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/debug\Example_9.6.X.debug.obj
+__ptext3 1276 0 CODE 0 text3 dist/default/debug\Example_9.6.X.debug.obj
+__Htext5 0 0 ABS 0 text5 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\Example_9.6.X.debug.obj
+__ptext4 102A 0 CODE 0 text4 dist/default/debug\Example_9.6.X.debug.obj
+i2Segment_init@Segment 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Htext6 0 0 ABS 0 text6 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\Example_9.6.X.debug.obj
+__ptext5 80C 0 CODE 0 text5 dist/default/debug\Example_9.6.X.debug.obj
+__Htext7 0 0 ABS 0 text7 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/debug\Example_9.6.X.debug.obj
+__ptext6 DCC 0 CODE 0 text6 dist/default/debug\Example_9.6.X.debug.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+OpenUSART@config 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Htext8 0 0 ABS 0 text8 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/debug\Example_9.6.X.debug.obj
+__ptext7 125A 0 CODE 0 text7 dist/default/debug\Example_9.6.X.debug.obj
+__pbssCOMRAM 49 0 COMRAM 1 bssCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Htext9 0 0 ABS 0 text9 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/debug\Example_9.6.X.debug.obj
+__ptext8 121E 0 CODE 0 text8 dist/default/debug\Example_9.6.X.debug.obj
+__ptext9 1142 0 CODE 0 text9 dist/default/debug\Example_9.6.X.debug.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug\Example_9.6.X.debug.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug\Example_9.6.X.debug.obj
+i2Display@x A 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+?i2_NumDisplay 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+?_Delay10KTCYx 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+?i2_Seq_count 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_DisplayValue 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_of__initialization 1020 0 CODE 0 cinit dist/default/debug\Example_9.6.X.debug.obj
+i2Set_TIME@str E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2Seq_count@ptr3 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Delay_s_ 1276 0 CODE 0 text23 dist/default/debug\Example_9.6.X.debug.obj
+?_OpenUSART 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Switch_Relay 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+Seq_count@ptr1 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_USART_Status 49 0 COMRAM 1 bssCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_DisplayValue C58 0 CODE 0 text21 dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Delay_s_ 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hidata 0 0 CODE 0 idata dist/default/debug\Example_9.6.X.debug.obj
+__Lidata 0 0 CODE 0 idata dist/default/debug\Example_9.6.X.debug.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug\Example_9.6.X.debug.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug\Example_9.6.X.debug.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/debug\Example_9.6.X.debug.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/debug\Example_9.6.X.debug.obj
+int_func EF0 0 CODE 0 intcode_body dist/default/debug\Example_9.6.X.debug.obj
+__Hparam 0 0 ABS 0 rparam dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Delay_s_ 1268 0 CODE 0 text7 dist/default/debug\Example_9.6.X.debug.obj
+__Lparam 0 0 ABS 0 rparam dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_NumDisplay 1192 0 CODE 0 text20 dist/default/debug\Example_9.6.X.debug.obj
+main@config1 2E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2_DisplayValue B74 0 CODE 0 text21 dist/default/debug\Example_9.6.X.debug.obj
+__Hsmallconst 80C 0 SMALLCONST 0 smallconst dist/default/debug\Example_9.6.X.debug.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/debug\Example_9.6.X.debug.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/debug\Example_9.6.X.debug.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\Example_9.6.X.debug.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\Example_9.6.X.debug.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/debug\Example_9.6.X.debug.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/debug\Example_9.6.X.debug.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__pcinit FD4 0 CODE 0 cinit dist/default/debug\Example_9.6.X.debug.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+?_Set_TIME 2B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+_Display 80C 0 CODE 0 text5 dist/default/debug\Example_9.6.X.debug.obj
+__size_of_main 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hconst 0 0 CODE 0 const dist/default/debug\Example_9.6.X.debug.obj
+__Lconst 0 0 CODE 0 const dist/default/debug\Example_9.6.X.debug.obj
+__size_of_OpenUSART 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+?_NumDisplay 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/debug\Example_9.6.X.debug.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/debug\Example_9.6.X.debug.obj
+__pidataBANK0 1206 0 CODE 0 idataBANK0 dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Rx_isr F78 0 CODE 0 intcode_body dist/default/debug\Example_9.6.X.debug.obj
+__end_of_NumDisplay 116A 0 CODE 0 text9 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_Config_Interrupt 1276 0 CODE 0 text3 dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_NumDisplay 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+?i2_Switch_Relay 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Htext10 0 0 ABS 0 text10 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/debug\Example_9.6.X.debug.obj
+__Htext20 0 0 ABS 0 text20 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/debug\Example_9.6.X.debug.obj
+__ptext10 A90 0 CODE 0 text10 dist/default/debug\Example_9.6.X.debug.obj
+Switch_Relay@sw 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__Htext11 0 0 ABS 0 text11 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/debug\Example_9.6.X.debug.obj
+__ptext20 116A 0 CODE 0 text20 dist/default/debug\Example_9.6.X.debug.obj
+__Htext21 0 0 ABS 0 text21 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/debug\Example_9.6.X.debug.obj
+__ptext11 10DE 0 CODE 0 text11 dist/default/debug\Example_9.6.X.debug.obj
+__Htext12 0 0 ABS 0 text12 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/debug\Example_9.6.X.debug.obj
+Seq_count@ptr2 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Set_TIME 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__ptext21 B74 0 CODE 0 text21 dist/default/debug\Example_9.6.X.debug.obj
+__Htext22 0 0 ABS 0 text22 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/debug\Example_9.6.X.debug.obj
+__ptext12 11D2 0 CODE 0 text12 dist/default/debug\Example_9.6.X.debug.obj
+__Htext13 0 0 ABS 0 text13 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/debug\Example_9.6.X.debug.obj
+__ptext22 1110 0 CODE 0 text22 dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Delay10KTCYx 1234 0 CODE 0 text8 dist/default/debug\Example_9.6.X.debug.obj
+__Htext23 0 0 ABS 0 text23 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/debug\Example_9.6.X.debug.obj
+__ptext13 C58 0 CODE 0 text13 dist/default/debug\Example_9.6.X.debug.obj
+__ptext23 1268 0 CODE 0 text23 dist/default/debug\Example_9.6.X.debug.obj
+__Htext24 0 0 ABS 0 text24 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/debug\Example_9.6.X.debug.obj
+__Htext15 0 0 ABS 0 text15 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/debug\Example_9.6.X.debug.obj
+__ptext24 1234 0 CODE 0 text24 dist/default/debug\Example_9.6.X.debug.obj
+__Htext25 0 0 ABS 0 text25 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/debug\Example_9.6.X.debug.obj
+__ptext15 1068 0 CODE 0 text15 dist/default/debug\Example_9.6.X.debug.obj
+__Htext16 0 0 ABS 0 text16 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/debug\Example_9.6.X.debug.obj
+__ptext25 11EC 0 CODE 0 text25 dist/default/debug\Example_9.6.X.debug.obj
+__ptext16 D12 0 CODE 0 text16 dist/default/debug\Example_9.6.X.debug.obj
+__Htext17 0 0 ABS 0 text17 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/debug\Example_9.6.X.debug.obj
+?i2_Segment_init 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__ptext17 1192 0 CODE 0 text17 dist/default/debug\Example_9.6.X.debug.obj
+__Htext18 0 0 ABS 0 text18 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/debug\Example_9.6.X.debug.obj
+i2_Seq_count E5E 0 CODE 0 text19 dist/default/debug\Example_9.6.X.debug.obj
+NumDisplay@Segment 21 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+Format_DEC@p 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__ptext18 94E 0 CODE 0 text18 dist/default/debug\Example_9.6.X.debug.obj
+__Htext19 0 0 ABS 0 text19 dist/default/debug\Example_9.6.X.debug.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/debug\Example_9.6.X.debug.obj
+__ptext19 E5E 0 CODE 0 text19 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Config_Interrupt 1282 0 CODE 0 text3 dist/default/debug\Example_9.6.X.debug.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_OpenUSART F78 0 CODE 0 text2 dist/default/debug\Example_9.6.X.debug.obj
+__Hend_init 18 0 CODE 0 end_init dist/default/debug\Example_9.6.X.debug.obj
+__Lend_init 14 0 CODE 0 end_init dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Seq_count 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+?i2_Format_DEC 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Delay10KTCYx 124A 0 CODE 0 text24 dist/default/debug\Example_9.6.X.debug.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+Display@ptr 29 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Switch_Relay 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__pidataCOMRAM 11B8 0 CODE 0 idataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+Format_DEC@q 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+i2NumDisplay@Number 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Reset_TIME 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Config_Interrupt 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug\Example_9.6.X.debug.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\Example_9.6.X.debug.obj
+_Set_TIME 102A 0 CODE 0 text4 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_NumDisplay 1142 0 CODE 0 text9 dist/default/debug\Example_9.6.X.debug.obj
+__stringdata 800 0 SMALLCONST 0 smallconst dist/default/debug\Example_9.6.X.debug.obj
+i2Seq_count@ptr2 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Format_DEC 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Display 94E 0 CODE 0 text5 dist/default/debug\Example_9.6.X.debug.obj
+__accesstop 60 0 ABS 0 - C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+__end_of_Set_TIME 1068 0 CODE 0 text4 dist/default/debug\Example_9.6.X.debug.obj
+?_UsartConfig 21 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__end_of_UsartConfig 125A 0 CODE 0 text1 dist/default/debug\Example_9.6.X.debug.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug\Example_9.6.X.debug.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug\Example_9.6.X.debug.obj
+__pintcode_body EF0 0 CODE 0 intcode_body dist/default/debug\Example_9.6.X.debug.obj
+intlevel0 0 0 CODE 0 text C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+UsartConfig@config1 21 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+UsartConfig@config2 22 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+intlevel1 0 0 CODE 0 text C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+i2_Switch_Relay 11EC 0 CODE 0 text25 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+intlevel2 0 0 CODE 0 text C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+intlevel3 0 0 CODE 0 text C:\Users\tbi\AppData\Local\Temp\s1n0.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+?_Seq_count 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Switch_Relay 1206 0 CODE 0 text25 dist/default/debug\Example_9.6.X.debug.obj
+__end_of_Seq_count E5E 0 CODE 0 text6 dist/default/debug\Example_9.6.X.debug.obj
+Seq_count@ptr3 22 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+?i2_Delay10KTCYx 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__pdataCOMRAM 2F 0 COMRAM 1 dataCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_of_DisplayValue B74 0 CODE 0 text10 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+start_initialization FD4 0 CODE 0 cinit dist/default/debug\Example_9.6.X.debug.obj
+__size_of_Delay_s_ 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+_UsartConfig 124A 0 CODE 0 text1 dist/default/debug\Example_9.6.X.debug.obj
+?_Switch_Relay 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__size_of_UsartConfig 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Segment_init 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+i2_Delay10KTCYx 1234 0 CODE 0 text24 dist/default/debug\Example_9.6.X.debug.obj
+__size_ofi2_Display 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__end_ofi2_Segment_init 1142 0 CODE 0 text22 dist/default/debug\Example_9.6.X.debug.obj
+__initialization FD4 0 CODE 0 cinit dist/default/debug\Example_9.6.X.debug.obj
+i2Format_DEC@p 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+_Switch_Relay 11D2 0 CODE 0 text12 dist/default/debug\Example_9.6.X.debug.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+Segment_init@Segment 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__activetblptr 2 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/debug\Example_9.6.X.debug.obj
+i2Delay10KTCYx@unit 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\Example_9.6.X.debug.obj
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta> <class name>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1 CODE
+intcode 0 8 8 10 1 CODE
+smallconst 0 800 800 C 1 SMALLCONST
+config 0 300000 300000 E 1 CONFIG
+idloc 0 200000 200000 8 1 IDLOC
+cstackCOMRAM 1 1 1 5B 1 COMRAM
+dataBANK0 1 60 60 17 1 BANK0
+text5 0 80C 80C A11 1 CODE
+text8 0 121E 121E 64 1 CODE

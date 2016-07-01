@@ -1,0 +1,1022 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.32 build 58300 
+                                                                                               Tue Oct 07 12:10:08 2014
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 58300
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    15                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    16                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    17  0000                     
+    18                           	psect	idataCOMRAM
+    19  007DFE                     __pidataCOMRAM:
+    20                           	opt stack 0
+    21                           
+    22                           ;initializer for _Num1
+    23  007DFE  09                 	db	9
+    24                           
+    25                           ;initializer for _Num2
+    26  007DFF  09                 	db	9
+    27                           
+    28                           ;initializer for _Num3
+    29  007E00  09                 	db	9
+    30                           
+    31                           ;initializer for _Num4
+    32  007E01  09                 	db	9
+    33  0000                     _PORTAbits	set	3968
+    34  0000                     _PORTD	set	3971
+    35  0000                     _TRISAbits	set	3986
+    36  0000                     _TRISD	set	3989
+    37                           
+    38                           ; #config settings
+    39  0000                     
+    40                           	psect	cinit
+    41  007E20                     __pcinit:
+    42                           	opt stack 0
+    43  007E20                     start_initialization:
+    44                           	opt stack 0
+    45  007E20                     __initialization:
+    46                           	opt stack 0
+    47                           
+    48                           ; Initialize objects allocated to COMRAM (4 bytes)
+    49                           ; load TBLPTR registers with __pidataCOMRAM
+    50  007E20  0EFE               	movlw	low __pidataCOMRAM
+    51  007E22  6EF6               	movwf	tblptrl,c
+    52  007E24  0E7D               	movlw	high __pidataCOMRAM
+    53  007E26  6EF7               	movwf	tblptrh,c
+    54  007E28  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+    55  007E2A  6EF8               	movwf	tblptru,c
+    56  007E2C  EE00  F00B         	lfsr	0,__pdataCOMRAM
+    57  007E30  EE10 F004          	lfsr	1,4
+    58  007E34                     copy_data0:
+    59  007E34  0009               	tblrd		*+
+    60  007E36  CFF5 FFEE          	movff	tablat,postinc0
+    61  007E3A  50E5               	movf	postdec1,w,c
+    62  007E3C  50E1               	movf	fsr1l,w,c
+    63  007E3E  E1FA               	bnz	copy_data0
+    64  007E40                     end_of_initialization:
+    65                           	opt stack 0
+    66  007E40                     __end_of__initialization:
+    67                           	opt stack 0
+    68  007E40  0E00               	movlw	low (__Lmediumconst shr (0+16))
+    69  007E42  6EF8               	movwf	tblptru,c
+    70  007E44  0100               	movlb	0
+    71  007E46  EF79  F03F         	goto	_main	;jump to C main() function
+    72                           tblptru	equ	0xFF8
+    73                           tblptrh	equ	0xFF7
+    74                           tblptrl	equ	0xFF6
+    75                           tablat	equ	0xFF5
+    76                           postinc0	equ	0xFEE
+    77                           postdec1	equ	0xFE5
+    78                           fsr1l	equ	0xFE1
+    79                           
+    80                           	psect	dataCOMRAM
+    81  00000B                     __pdataCOMRAM:
+    82                           	opt stack 0
+    83  00000B                     _Num1:
+    84                           	opt stack 0
+    85  00000B                     	ds	1
+    86  00000C                     _Num2:
+    87                           	opt stack 0
+    88  00000C                     	ds	1
+    89  00000D                     _Num3:
+    90                           	opt stack 0
+    91  00000D                     	ds	1
+    92  00000E                     _Num4:
+    93                           	opt stack 0
+    94  00000E                     	ds	1
+    95                           tblptru	equ	0xFF8
+    96                           tblptrh	equ	0xFF7
+    97                           tblptrl	equ	0xFF6
+    98                           tablat	equ	0xFF5
+    99                           postinc0	equ	0xFEE
+   100                           postdec1	equ	0xFE5
+   101                           fsr1l	equ	0xFE1
+   102                           
+   103                           	psect	cstackCOMRAM
+   104  000001                     __pcstackCOMRAM:
+   105                           	opt stack 0
+   106  000001                     ??_Delay10KTCYx:
+   107  000001                     Segment_init@Segment:
+   108                           	opt stack 0
+   109  000001                     Seq_count@ptr1:
+   110                           	opt stack 0
+   111                           
+   112                           ; 2 bytes @ 0x0
+   113  000001                     	ds	1
+   114  000002                     NumDisplay@Segment:
+   115                           	opt stack 0
+   116  000002                     Delay10KTCYx@unit:
+   117                           	opt stack 0
+   118                           
+   119                           ; 1 bytes @ 0x1
+   120  000002                     	ds	1
+   121  000003                     NumDisplay@Number:
+   122                           	opt stack 0
+   123  000003                     Seq_count@ptr2:
+   124                           	opt stack 0
+   125                           
+   126                           ; 2 bytes @ 0x2
+   127  000003                     	ds	2
+   128  000005                     Seq_count@ptr3:
+   129                           	opt stack 0
+   130                           
+   131                           ; 2 bytes @ 0x4
+   132  000005                     	ds	2
+   133  000007                     Seq_count@ptr4:
+   134                           	opt stack 0
+   135                           
+   136                           ; 2 bytes @ 0x6
+   137  000007                     	ds	2
+   138  000009                     main@x:
+   139                           	opt stack 0
+   140                           
+   141                           ; 2 bytes @ 0x8
+   142  000009                     	ds	2
+   143                           tblptru	equ	0xFF8
+   144                           tblptrh	equ	0xFF7
+   145                           tblptrl	equ	0xFF6
+   146                           tablat	equ	0xFF5
+   147                           postinc0	equ	0xFEE
+   148                           postdec1	equ	0xFE5
+   149                           fsr1l	equ	0xFE1
+   150                           
+   151 ;;
+   152 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   153 ;;
+   154 ;; *************** function _main *****************
+   155 ;; Defined at:
+   156 ;;		line 47 in file "main.c"
+   157 ;; Parameters:    Size  Location     Type
+   158 ;;		None
+   159 ;; Auto vars:     Size  Location     Type
+   160 ;;  x               2    8[COMRAM] int 
+   161 ;; Return value:  Size  Location     Type
+   162 ;;		None               void
+   163 ;; Registers used:
+   164 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   165 ;; Tracked objects:
+   166 ;;		On entry : 0/0
+   167 ;;		On exit  : 0/0
+   168 ;;		Unchanged: 0/0
+   169 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   170 ;;      Params:         0       0       0       0       0       0       0       0       0
+   171 ;;      Locals:         2       0       0       0       0       0       0       0       0
+   172 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   173 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   174 ;;Total ram usage:        2 bytes
+   175 ;; Hardware stack levels required when called:    2
+   176 ;; This function calls:
+   177 ;;		_Delay_s_
+   178 ;;		_NumDisplay
+   179 ;;		_Seq_count
+   180 ;; This function is called by:
+   181 ;;		Startup code after reset
+   182 ;; This function uses a non-reentrant model
+   183 ;;
+   184                           
+   185                           	psect	text0
+   186  007EF2                     __ptext0:
+   187                           	opt stack 0
+   188  007EF2                     _main:
+   189                           	opt stack 29
+   190  007EF2                     l17:
+   191                           
+   192                           ;main.c: 51: {
+   193                           ;main.c: 52: int x = 0;
+   194  007EF2  0E00               	movlw	0
+   195  007EF4  6E0A               	movwf	main@x+1,c
+   196  007EF6  0E00               	movlw	0
+   197  007EF8  6E09               	movwf	main@x,c
+   198                           
+   199                           ;main.c: 53: while(x<=10)
+   200  007EFA  D01E               	goto	l803
+   201  007EFC                     l791:
+   202                           
+   203                           ;main.c: 54: {
+   204                           ;main.c: 55: NumDisplay(Num1, 1);
+   205  007EFC  0E01               	movlw	1
+   206  007EFE  6E02               	movwf	NumDisplay@Segment,c
+   207  007F00  500B               	movf	_Num1,w,c
+   208  007F02  EC3F  F03F         	call	_NumDisplay
+   209                           
+   210                           ;main.c: 56: Delay_s_();
+   211  007F06  EC01  F03F         	call	_Delay_s_	;wreg free
+   212                           
+   213                           ;main.c: 57: NumDisplay(Num2, 2);
+   214  007F0A  0E02               	movlw	2
+   215  007F0C  6E02               	movwf	NumDisplay@Segment,c
+   216  007F0E  500C               	movf	_Num2,w,c
+   217  007F10  EC3F  F03F         	call	_NumDisplay
+   218                           
+   219                           ;main.c: 58: Delay_s_();
+   220  007F14  EC01  F03F         	call	_Delay_s_	;wreg free
+   221                           
+   222                           ;main.c: 59: NumDisplay(Num3, 3);
+   223  007F18  0E03               	movlw	3
+   224  007F1A  6E02               	movwf	NumDisplay@Segment,c
+   225  007F1C  500D               	movf	_Num3,w,c
+   226  007F1E  EC3F  F03F         	call	_NumDisplay
+   227                           
+   228                           ;main.c: 60: Delay_s_();
+   229  007F22  EC01  F03F         	call	_Delay_s_	;wreg free
+   230                           
+   231                           ;main.c: 61: NumDisplay(Num4, 4);
+   232  007F26  0E04               	movlw	4
+   233  007F28  6E02               	movwf	NumDisplay@Segment,c
+   234  007F2A  500E               	movf	_Num4,w,c
+   235  007F2C  EC3F  F03F         	call	_NumDisplay
+   236                           
+   237                           ;main.c: 62: Delay_s_();
+   238  007F30  EC01  F03F         	call	_Delay_s_	;wreg free
+   239                           
+   240                           ;main.c: 63: x++;
+   241  007F34  4A09               	infsnz	main@x,f,c
+   242  007F36  2A0A               	incf	main@x+1,f,c
+   243  007F38                     l803:
+   244  007F38  500A               	movf	main@x+1,w,c
+   245  007F3A  0A80               	xorlw	128
+   246  007F3C  0F80               	addlw	-128
+   247  007F3E  0E0B               	movlw	11
+   248  007F40  B4D8               	btfsc	status,2,c
+   249  007F42  5C09               	subwf	main@x,w,c
+   250  007F44  A0D8               	btfss	status,0,c
+   251  007F46  D7DA               	goto	l791
+   252                           
+   253                           ;main.c: 64: }
+   254                           ;main.c: 65: Seq_count(&Num1, &Num2, &Num3, &Num4);
+   255  007F48  0E00               	movlw	high _Num1
+   256  007F4A  6E02               	movwf	Seq_count@ptr1+1,c
+   257  007F4C  0E0B               	movlw	low _Num1
+   258  007F4E  6E01               	movwf	Seq_count@ptr1,c
+   259  007F50  0E00               	movlw	high _Num2
+   260  007F52  6E04               	movwf	Seq_count@ptr2+1,c
+   261  007F54  0E0C               	movlw	low _Num2
+   262  007F56  6E03               	movwf	Seq_count@ptr2,c
+   263  007F58  0E00               	movlw	high _Num3
+   264  007F5A  6E06               	movwf	Seq_count@ptr3+1,c
+   265  007F5C  0E0D               	movlw	low _Num3
+   266  007F5E  6E05               	movwf	Seq_count@ptr3,c
+   267  007F60  0E00               	movlw	high _Num4
+   268  007F62  6E08               	movwf	Seq_count@ptr4+1,c
+   269  007F64  0E0E               	movlw	low _Num4
+   270  007F66  6E07               	movwf	Seq_count@ptr4,c
+   271  007F68  ECB7  F03F         	call	_Seq_count	;wreg free
+   272  007F6C  D7C2               	goto	l17
+   273  007F6E                     __end_of_main:
+   274                           	opt stack 0
+   275                           tblptru	equ	0xFF8
+   276                           tblptrh	equ	0xFF7
+   277                           tblptrl	equ	0xFF6
+   278                           tablat	equ	0xFF5
+   279                           postinc0	equ	0xFEE
+   280                           postdec1	equ	0xFE5
+   281                           fsr1l	equ	0xFE1
+   282                           status	equ	0xFD8
+   283                           
+   284 ;; *************** function _Seq_count *****************
+   285 ;; Defined at:
+   286 ;;		line 11 in file "counter.c"
+   287 ;; Parameters:    Size  Location     Type
+   288 ;;  ptr1            2    0[COMRAM] PTR unsigned char 
+   289 ;;		 -> Num1(1), 
+   290 ;;  ptr2            2    2[COMRAM] PTR unsigned char 
+   291 ;;		 -> Num2(1), 
+   292 ;;  ptr3            2    4[COMRAM] PTR unsigned char 
+   293 ;;		 -> Num3(1), 
+   294 ;;  ptr4            2    6[COMRAM] PTR unsigned char 
+   295 ;;		 -> Num4(1), 
+   296 ;; Auto vars:     Size  Location     Type
+   297 ;;		None
+   298 ;; Return value:  Size  Location     Type
+   299 ;;		None               void
+   300 ;; Registers used:
+   301 ;;		wreg, fsr2l, fsr2h, status,2, status,0
+   302 ;; Tracked objects:
+   303 ;;		On entry : 0/0
+   304 ;;		On exit  : 0/0
+   305 ;;		Unchanged: 0/0
+   306 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   307 ;;      Params:         8       0       0       0       0       0       0       0       0
+   308 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   309 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   310 ;;      Totals:         8       0       0       0       0       0       0       0       0
+   311 ;;Total ram usage:        8 bytes
+   312 ;; Hardware stack levels used:    1
+   313 ;; This function calls:
+   314 ;;		Nothing
+   315 ;; This function is called by:
+   316 ;;		_main
+   317 ;; This function uses a non-reentrant model
+   318 ;;
+   319                           
+   320                           	psect	text1
+   321  007F6E                     __ptext1:
+   322                           	opt stack 0
+   323  007F6E                     _Seq_count:
+   324                           	opt stack 30
+   325                           
+   326                           ;counter.c: 13: --*ptr1;
+   327                           
+   328                           ;incstack = 0
+   329  007F6E  C001  FFD9         	movff	Seq_count@ptr1,fsr2l
+   330  007F72  C002  FFDA         	movff	Seq_count@ptr1+1,fsr2h
+   331  007F76  06DF               	decf	indf2,f,c
+   332                           
+   333                           ;counter.c: 14: if(*ptr1==0xFF)
+   334  007F78  0EFF               	movlw	255
+   335  007F7A  C001  FFD9         	movff	Seq_count@ptr1,fsr2l
+   336  007F7E  C002  FFDA         	movff	Seq_count@ptr1+1,fsr2h
+   337  007F82  62DF               	cpfseq	indf2,c
+   338  007F84  D03C               	goto	l98
+   339                           
+   340                           ;counter.c: 15: {
+   341                           ;counter.c: 16: --*ptr2;
+   342  007F86  C003  FFD9         	movff	Seq_count@ptr2,fsr2l
+   343  007F8A  C004  FFDA         	movff	Seq_count@ptr2+1,fsr2h
+   344  007F8E  06DF               	decf	indf2,f,c
+   345                           
+   346                           ;counter.c: 17: *ptr1 = 9;
+   347  007F90  C001  FFD9         	movff	Seq_count@ptr1,fsr2l
+   348  007F94  C002  FFDA         	movff	Seq_count@ptr1+1,fsr2h
+   349  007F98  0E09               	movlw	9
+   350  007F9A  6EDF               	movwf	indf2,c
+   351                           
+   352                           ;counter.c: 18: if(*ptr2==0xFF)
+   353  007F9C  0EFF               	movlw	255
+   354  007F9E  C003  FFD9         	movff	Seq_count@ptr2,fsr2l
+   355  007FA2  C004  FFDA         	movff	Seq_count@ptr2+1,fsr2h
+   356  007FA6  62DF               	cpfseq	indf2,c
+   357  007FA8  D02A               	goto	l98
+   358                           
+   359                           ;counter.c: 19: {
+   360                           ;counter.c: 20: --*ptr3;
+   361  007FAA  C005  FFD9         	movff	Seq_count@ptr3,fsr2l
+   362  007FAE  C006  FFDA         	movff	Seq_count@ptr3+1,fsr2h
+   363  007FB2  06DF               	decf	indf2,f,c
+   364                           
+   365                           ;counter.c: 21: *ptr2=9;
+   366  007FB4  C003  FFD9         	movff	Seq_count@ptr2,fsr2l
+   367  007FB8  C004  FFDA         	movff	Seq_count@ptr2+1,fsr2h
+   368  007FBC  0E09               	movlw	9
+   369  007FBE  6EDF               	movwf	indf2,c
+   370                           
+   371                           ;counter.c: 22: if(*ptr3==0xFF)
+   372  007FC0  0EFF               	movlw	255
+   373  007FC2  C005  FFD9         	movff	Seq_count@ptr3,fsr2l
+   374  007FC6  C006  FFDA         	movff	Seq_count@ptr3+1,fsr2h
+   375  007FCA  62DF               	cpfseq	indf2,c
+   376  007FCC  D018               	goto	l98
+   377                           
+   378                           ;counter.c: 23: {
+   379                           ;counter.c: 24: --*ptr4;
+   380  007FCE  C007  FFD9         	movff	Seq_count@ptr4,fsr2l
+   381  007FD2  C008  FFDA         	movff	Seq_count@ptr4+1,fsr2h
+   382  007FD6  06DF               	decf	indf2,f,c
+   383                           
+   384                           ;counter.c: 25: *ptr3=9;
+   385  007FD8  C005  FFD9         	movff	Seq_count@ptr3,fsr2l
+   386  007FDC  C006  FFDA         	movff	Seq_count@ptr3+1,fsr2h
+   387  007FE0  0E09               	movlw	9
+   388  007FE2  6EDF               	movwf	indf2,c
+   389                           
+   390                           ;counter.c: 26: if(*ptr4==0xFF)
+   391  007FE4  0EFF               	movlw	255
+   392  007FE6  C007  FFD9         	movff	Seq_count@ptr4,fsr2l
+   393  007FEA  C008  FFDA         	movff	Seq_count@ptr4+1,fsr2h
+   394  007FEE  62DF               	cpfseq	indf2,c
+   395  007FF0  D006               	goto	l98
+   396                           
+   397                           ;counter.c: 27: {
+   398                           ;counter.c: 28: *ptr4=9;
+   399  007FF2  C007  FFD9         	movff	Seq_count@ptr4,fsr2l
+   400  007FF6  C008  FFDA         	movff	Seq_count@ptr4+1,fsr2h
+   401  007FFA  0E09               	movlw	9
+   402  007FFC  6EDF               	movwf	indf2,c
+   403  007FFE                     l98:
+   404  007FFE  0012               	return	
+   405  008000                     __end_of_Seq_count:
+   406                           	opt stack 0
+   407                           tblptru	equ	0xFF8
+   408                           tblptrh	equ	0xFF7
+   409                           tblptrl	equ	0xFF6
+   410                           tablat	equ	0xFF5
+   411                           postinc0	equ	0xFEE
+   412                           postdec1	equ	0xFE5
+   413                           fsr1l	equ	0xFE1
+   414                           indf2	equ	0xFDF
+   415                           fsr2h	equ	0xFDA
+   416                           fsr2l	equ	0xFD9
+   417                           status	equ	0xFD8
+   418                           
+   419 ;; *************** function _NumDisplay *****************
+   420 ;; Defined at:
+   421 ;;		line 86 in file "segment.c"
+   422 ;; Parameters:    Size  Location     Type
+   423 ;;  Number          1    wreg     unsigned char 
+   424 ;;  Segment         1    1[COMRAM] unsigned char 
+   425 ;; Auto vars:     Size  Location     Type
+   426 ;;  Number          1    2[COMRAM] unsigned char 
+   427 ;; Return value:  Size  Location     Type
+   428 ;;		None               void
+   429 ;; Registers used:
+   430 ;;		wreg, status,2, status,0, cstack
+   431 ;; Tracked objects:
+   432 ;;		On entry : 0/0
+   433 ;;		On exit  : 0/0
+   434 ;;		Unchanged: 0/0
+   435 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   436 ;;      Params:         1       0       0       0       0       0       0       0       0
+   437 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   438 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   439 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   440 ;;Total ram usage:        2 bytes
+   441 ;; Hardware stack levels used:    1
+   442 ;; Hardware stack levels required when called:    1
+   443 ;; This function calls:
+   444 ;;		_Segment_init
+   445 ;; This function is called by:
+   446 ;;		_main
+   447 ;; This function uses a non-reentrant model
+   448 ;;
+   449                           
+   450                           	psect	text2
+   451  007E7E                     __ptext2:
+   452                           	opt stack 0
+   453  007E7E                     _NumDisplay:
+   454                           	opt stack 29
+   455                           
+   456                           ;incstack = 0
+   457                           ;NumDisplay@Number stored from wreg
+   458  007E7E  6E03               	movwf	NumDisplay@Number,c
+   459                           
+   460                           ;segment.c: 89: Segment_init(Segment);
+   461  007E80  5002               	movf	NumDisplay@Segment,w,c
+   462  007E82  EC25  F03F         	call	_Segment_init
+   463                           
+   464                           ;segment.c: 90: switch (Number)
+   465  007E86  D015               	goto	l753
+   466  007E88                     l731:
+   467                           
+   468                           ;segment.c: 93: PORTD = 0b00111111;
+   469  007E88  0E3F               	movlw	63
+   470  007E8A  D011               	goto	L9
+   471  007E8C                     l733:
+   472                           
+   473                           ;segment.c: 96: PORTD = 0b00000110;
+   474  007E8C  0E06               	movlw	6
+   475  007E8E  D00F               	goto	L9
+   476  007E90                     l735:
+   477                           
+   478                           ;segment.c: 99: PORTD = 0b01011011;
+   479  007E90  0E5B               	movlw	91
+   480  007E92  D00D               	goto	L9
+   481  007E94                     l737:
+   482                           
+   483                           ;segment.c: 102: PORTD = 0b01001111;
+   484  007E94  0E4F               	movlw	79
+   485  007E96  D00B               	goto	L9
+   486  007E98                     l739:
+   487                           
+   488                           ;segment.c: 105: PORTD = 0b01100110;
+   489  007E98  0E66               	movlw	102
+   490  007E9A  D009               	goto	L9
+   491  007E9C                     l741:
+   492                           
+   493                           ;segment.c: 108: PORTD = 0b01101101;
+   494  007E9C  0E6D               	movlw	109
+   495  007E9E  D007               	goto	L9
+   496  007EA0                     l743:
+   497                           
+   498                           ;segment.c: 111: PORTD = 0b01111101;
+   499  007EA0  0E7D               	movlw	125
+   500  007EA2  D005               	goto	L9
+   501  007EA4                     l745:
+   502                           
+   503                           ;segment.c: 114: PORTD = 0b00000111;
+   504  007EA4  0E07               	movlw	7
+   505  007EA6  D003               	goto	L9
+   506  007EA8                     l747:
+   507                           
+   508                           ;segment.c: 117: PORTD = 0b01111111;
+   509  007EA8  0E7F               	movlw	127
+   510  007EAA  D001               	goto	L9
+   511  007EAC                     l749:
+   512                           
+   513                           ;segment.c: 120: PORTD = 0b01101111;
+   514  007EAC  0E6F               	movlw	111
+   515  007EAE                     L9:
+   516  007EAE  6E83               	movwf	3971,c	;volatile
+   517                           
+   518                           ;segment.c: 121: break;
+   519  007EB0  D01F               	goto	l91
+   520  007EB2                     l753:
+   521  007EB2  5003               	movf	NumDisplay@Number,w,c
+   522                           
+   523                           ; Switch size 1, requested type "space"
+   524                           ; Number of cases is 10, Range of values is 0 to 9
+   525                           ; switch strategies available:
+   526                           ; Name         Instructions Cycles
+   527                           ; simple_byte           31    16 (average)
+   528                           ;	Chosen strategy is simple_byte
+   529  007EB4  0A00               	xorlw	0	; case 0
+   530  007EB6  B4D8               	btfsc	status,2,c
+   531  007EB8  D7E7               	goto	l731
+   532  007EBA  0A01               	xorlw	1	; case 1
+   533  007EBC  B4D8               	btfsc	status,2,c
+   534  007EBE  D7E6               	goto	l733
+   535  007EC0  0A03               	xorlw	3	; case 2
+   536  007EC2  B4D8               	btfsc	status,2,c
+   537  007EC4  D7E5               	goto	l735
+   538  007EC6  0A01               	xorlw	1	; case 3
+   539  007EC8  B4D8               	btfsc	status,2,c
+   540  007ECA  D7E4               	goto	l737
+   541  007ECC  0A07               	xorlw	7	; case 4
+   542  007ECE  B4D8               	btfsc	status,2,c
+   543  007ED0  D7E3               	goto	l739
+   544  007ED2  0A01               	xorlw	1	; case 5
+   545  007ED4  B4D8               	btfsc	status,2,c
+   546  007ED6  D7E2               	goto	l741
+   547  007ED8  0A03               	xorlw	3	; case 6
+   548  007EDA  B4D8               	btfsc	status,2,c
+   549  007EDC  D7E1               	goto	l743
+   550  007EDE  0A01               	xorlw	1	; case 7
+   551  007EE0  B4D8               	btfsc	status,2,c
+   552  007EE2  D7E0               	goto	l745
+   553  007EE4  0A0F               	xorlw	15	; case 8
+   554  007EE6  B4D8               	btfsc	status,2,c
+   555  007EE8  D7DF               	goto	l747
+   556  007EEA  0A01               	xorlw	1	; case 9
+   557  007EEC  B4D8               	btfsc	status,2,c
+   558  007EEE  D7DE               	goto	l749
+   559  007EF0                     l91:
+   560  007EF0  0012               	return	
+   561  007EF2                     __end_of_NumDisplay:
+   562                           	opt stack 0
+   563                           tblptru	equ	0xFF8
+   564                           tblptrh	equ	0xFF7
+   565                           tblptrl	equ	0xFF6
+   566                           tablat	equ	0xFF5
+   567                           postinc0	equ	0xFEE
+   568                           postdec1	equ	0xFE5
+   569                           fsr1l	equ	0xFE1
+   570                           indf2	equ	0xFDF
+   571                           fsr2h	equ	0xFDA
+   572                           fsr2l	equ	0xFD9
+   573                           status	equ	0xFD8
+   574                           
+   575 ;; *************** function _Segment_init *****************
+   576 ;; Defined at:
+   577 ;;		line 62 in file "segment.c"
+   578 ;; Parameters:    Size  Location     Type
+   579 ;;  Segment         1    wreg     unsigned char 
+   580 ;; Auto vars:     Size  Location     Type
+   581 ;;  Segment         1    0[COMRAM] unsigned char 
+   582 ;; Return value:  Size  Location     Type
+   583 ;;		None               void
+   584 ;; Registers used:
+   585 ;;		wreg, status,2, status,0
+   586 ;; Tracked objects:
+   587 ;;		On entry : 0/0
+   588 ;;		On exit  : 0/0
+   589 ;;		Unchanged: 0/0
+   590 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   591 ;;      Params:         0       0       0       0       0       0       0       0       0
+   592 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   593 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   594 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   595 ;;Total ram usage:        1 bytes
+   596 ;; Hardware stack levels used:    1
+   597 ;; This function calls:
+   598 ;;		Nothing
+   599 ;; This function is called by:
+   600 ;;		_NumDisplay
+   601 ;; This function uses a non-reentrant model
+   602 ;;
+   603                           
+   604                           	psect	text3
+   605  007E4A                     __ptext3:
+   606                           	opt stack 0
+   607  007E4A                     _Segment_init:
+   608                           	opt stack 29
+   609                           
+   610                           ;incstack = 0
+   611                           ;Segment_init@Segment stored from wreg
+   612  007E4A  6E01               	movwf	Segment_init@Segment,c
+   613                           
+   614                           ;segment.c: 67: TRISD = 0x00;
+   615  007E4C  0E00               	movlw	0
+   616  007E4E  6E95               	movwf	3989,c	;volatile
+   617                           
+   618                           ;segment.c: 68: TRISAbits.TRISA0 = 0;
+   619  007E50  9092               	bcf	3986,0,c	;volatile
+   620                           
+   621                           ;segment.c: 69: TRISAbits.TRISA1 = 0;
+   622  007E52  9292               	bcf	3986,1,c	;volatile
+   623                           
+   624                           ;segment.c: 70: TRISAbits.TRISA2 = 0;
+   625  007E54  9492               	bcf	3986,2,c	;volatile
+   626                           
+   627                           ;segment.c: 71: TRISAbits.TRISA3 = 0;
+   628  007E56  9692               	bcf	3986,3,c	;volatile
+   629                           
+   630                           ;segment.c: 74: if(Segment == 1)
+   631  007E58  0401               	decf	Segment_init@Segment,w,c
+   632  007E5A  A4D8               	btfss	status,2,c
+   633  007E5C  D002               	goto	l721
+   634                           
+   635                           ;segment.c: 75: PORTAbits.RA0 = 1;
+   636  007E5E  8080               	bsf	3968,0,c	;volatile
+   637  007E60  D00D               	goto	l76
+   638  007E62                     l721:
+   639                           
+   640                           ;segment.c: 76: else if(Segment == 2)
+   641  007E62  5001               	movf	Segment_init@Segment,w,c
+   642  007E64  0A02               	xorlw	2
+   643  007E66  A4D8               	btfss	status,2,c
+   644  007E68  D002               	goto	l725
+   645                           
+   646                           ;segment.c: 77: PORTAbits.RA1 = 1;
+   647  007E6A  8280               	bsf	3968,1,c	;volatile
+   648  007E6C  D007               	goto	l76
+   649  007E6E                     l725:
+   650                           
+   651                           ;segment.c: 78: else if(Segment== 3)
+   652  007E6E  5001               	movf	Segment_init@Segment,w,c
+   653  007E70  0A03               	xorlw	3
+   654  007E72  A4D8               	btfss	status,2,c
+   655  007E74  D002               	goto	l74
+   656                           
+   657                           ;segment.c: 79: PORTAbits.RA2 = 1;
+   658  007E76  8480               	bsf	3968,2,c	;volatile
+   659  007E78  D001               	goto	l76
+   660  007E7A                     l74:
+   661                           
+   662                           ;segment.c: 80: else
+   663                           ;segment.c: 81: PORTAbits.RA3 = 1;
+   664  007E7A  8680               	bsf	3968,3,c	;volatile
+   665  007E7C                     l76:
+   666  007E7C  0012               	return	
+   667  007E7E                     __end_of_Segment_init:
+   668                           	opt stack 0
+   669                           tblptru	equ	0xFF8
+   670                           tblptrh	equ	0xFF7
+   671                           tblptrl	equ	0xFF6
+   672                           tablat	equ	0xFF5
+   673                           postinc0	equ	0xFEE
+   674                           postdec1	equ	0xFE5
+   675                           fsr1l	equ	0xFE1
+   676                           indf2	equ	0xFDF
+   677                           fsr2h	equ	0xFDA
+   678                           fsr2l	equ	0xFD9
+   679                           status	equ	0xFD8
+   680                           
+   681 ;; *************** function _Delay_s_ *****************
+   682 ;; Defined at:
+   683 ;;		line 53 in file "delay.c"
+   684 ;; Parameters:    Size  Location     Type
+   685 ;;		None
+   686 ;; Auto vars:     Size  Location     Type
+   687 ;;		None
+   688 ;; Return value:  Size  Location     Type
+   689 ;;		None               void
+   690 ;; Registers used:
+   691 ;;		wreg, cstack
+   692 ;; Tracked objects:
+   693 ;;		On entry : 0/0
+   694 ;;		On exit  : 0/0
+   695 ;;		Unchanged: 0/0
+   696 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   697 ;;      Params:         0       0       0       0       0       0       0       0       0
+   698 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   699 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   700 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   701 ;;Total ram usage:        0 bytes
+   702 ;; Hardware stack levels used:    1
+   703 ;; Hardware stack levels required when called:    1
+   704 ;; This function calls:
+   705 ;;		_Delay10KTCYx
+   706 ;; This function is called by:
+   707 ;;		_main
+   708 ;; This function uses a non-reentrant model
+   709 ;;
+   710                           
+   711                           	psect	text4
+   712  007E02                     __ptext4:
+   713                           	opt stack 0
+   714  007E02                     _Delay_s_:
+   715                           	opt stack 29
+   716                           
+   717                           ;delay.c: 55: Delay10KTCYx(2);
+   718                           
+   719                           ;incstack = 0
+   720  007E02  0E02               	movlw	2
+   721  007E04  EC05  F03F         	call	_Delay10KTCYx
+   722  007E08  0012               	return	
+   723  007E0A                     __end_of_Delay_s_:
+   724                           	opt stack 0
+   725                           tblptru	equ	0xFF8
+   726                           tblptrh	equ	0xFF7
+   727                           tblptrl	equ	0xFF6
+   728                           tablat	equ	0xFF5
+   729                           postinc0	equ	0xFEE
+   730                           postdec1	equ	0xFE5
+   731                           fsr1l	equ	0xFE1
+   732                           indf2	equ	0xFDF
+   733                           fsr2h	equ	0xFDA
+   734                           fsr2l	equ	0xFD9
+   735                           status	equ	0xFD8
+   736                           
+   737 ;; *************** function _Delay10KTCYx *****************
+   738 ;; Defined at:
+   739 ;;		line 8 in file "C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\d10ktcyx.c"
+   740 ;; Parameters:    Size  Location     Type
+   741 ;;  unit            1    wreg     unsigned char 
+   742 ;; Auto vars:     Size  Location     Type
+   743 ;;  unit            1    1[COMRAM] unsigned char 
+   744 ;; Return value:  Size  Location     Type
+   745 ;;		None               void
+   746 ;; Registers used:
+   747 ;;		wreg
+   748 ;; Tracked objects:
+   749 ;;		On entry : 0/0
+   750 ;;		On exit  : 0/0
+   751 ;;		Unchanged: 0/0
+   752 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   753 ;;      Params:         0       0       0       0       0       0       0       0       0
+   754 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   755 ;;      Temps:          1       0       0       0       0       0       0       0       0
+   756 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   757 ;;Total ram usage:        2 bytes
+   758 ;; Hardware stack levels used:    1
+   759 ;; This function calls:
+   760 ;;		Nothing
+   761 ;; This function is called by:
+   762 ;;		_Delay_s_
+   763 ;; This function uses a non-reentrant model
+   764 ;;
+   765                           
+   766                           	psect	text5
+   767  007E0A                     __ptext5:
+   768                           	opt stack 0
+   769  007E0A                     _Delay10KTCYx:
+   770                           	opt stack 29
+   771                           
+   772                           ;incstack = 0
+   773                           ;Delay10KTCYx@unit stored from wreg
+   774  007E0A  6E02               	movwf	Delay10KTCYx@unit,c
+   775  007E0C                     l324:
+   776  007E0C  0E0D               	movlw	13
+   777  007E0E  6E01               	movwf	??_Delay10KTCYx& (0+255),c
+   778  007E10  0EFC               	movlw	252
+   779  007E12                     u177:
+   780  007E12  2EE8               	decfsz	wreg,f,c
+   781  007E14  D7FE               	goto	u177
+   782  007E16  2E01               	decfsz	??_Delay10KTCYx& (0+255),f,c
+   783  007E18  D7FC               	goto	u177
+   784  007E1A  2E02               	decfsz	Delay10KTCYx@unit,f,c
+   785  007E1C  D7F7               	goto	l324
+   786  007E1E  0012               	return	
+   787  007E20                     __end_of_Delay10KTCYx:
+   788                           	opt stack 0
+   789  0000                     tblptru	equ	0xFF8
+   790                           tblptrh	equ	0xFF7
+   791                           tblptrl	equ	0xFF6
+   792                           tablat	equ	0xFF5
+   793                           postinc0	equ	0xFEE
+   794                           wreg	equ	0xFE8
+   795                           postdec1	equ	0xFE5
+   796                           fsr1l	equ	0xFE1
+   797                           indf2	equ	0xFDF
+   798                           fsr2h	equ	0xFDA
+   799                           fsr2l	equ	0xFD9
+   800                           status	equ	0xFD8
+   801                           tblptru	equ	0xFF8
+   802                           tblptrh	equ	0xFF7
+   803                           tblptrl	equ	0xFF6
+   804                           tablat	equ	0xFF5
+   805                           postinc0	equ	0xFEE
+   806                           wreg	equ	0xFE8
+   807                           postdec1	equ	0xFE5
+   808                           fsr1l	equ	0xFE1
+   809                           indf2	equ	0xFDF
+   810                           fsr2h	equ	0xFDA
+   811                           fsr2l	equ	0xFD9
+   812                           status	equ	0xFD8
+   813                           
+   814                           	psect	rparam
+   815  0000                     tblptru	equ	0xFF8
+   816                           tblptrh	equ	0xFF7
+   817                           tblptrl	equ	0xFF6
+   818                           tablat	equ	0xFF5
+   819                           postinc0	equ	0xFEE
+   820                           wreg	equ	0xFE8
+   821                           postdec1	equ	0xFE5
+   822                           fsr1l	equ	0xFE1
+   823                           indf2	equ	0xFDF
+   824                           fsr2h	equ	0xFDA
+   825                           fsr2l	equ	0xFD9
+   826                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        4
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     10      14
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    Seq_count@ptr4	PTR unsigned char  size(2) Largest target is 1
+		 -> Num4(COMRAM[1]), 
+
+    Seq_count@ptr3	PTR unsigned char  size(2) Largest target is 1
+		 -> Num3(COMRAM[1]), 
+
+    Seq_count@ptr2	PTR unsigned char  size(2) Largest target is 1
+		 -> Num2(COMRAM[1]), 
+
+    Seq_count@ptr1	PTR unsigned char  size(2) Largest target is 1
+		 -> Num1(COMRAM[1]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_Seq_count
+    _NumDisplay->_Segment_init
+    _Delay_s_->_Delay10KTCYx
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0     629
+                                              8 COMRAM     2     2      0
+                           _Delay_s_
+                         _NumDisplay
+                          _Seq_count
+ ---------------------------------------------------------------------------------
+ (1) _Seq_count                                            8     0      8     352
+                                              0 COMRAM     8     0      8
+ ---------------------------------------------------------------------------------
+ (1) _NumDisplay                                           2     1      1     247
+                                              1 COMRAM     2     1      1
+                       _Segment_init
+ ---------------------------------------------------------------------------------
+ (2) _Segment_init                                         1     1      0      45
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _Delay_s_                                             0     0      0      15
+                       _Delay10KTCYx
+ ---------------------------------------------------------------------------------
+ (2) _Delay10KTCYx                                         2     2      0      15
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Delay_s_
+     _Delay10KTCYx
+   _NumDisplay
+     _Segment_init
+   _Seq_count
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      A       E       1       14.7%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0       E      20        0.0%
+DATA                 0      0       E       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.32 build 58300 
+Symbol Table                                                                                   Tue Oct 07 12:10:08 2014
+
+                     l17 7EF2                       l74 7E7A                       l91 7EF0  
+                     l76 7E7C                       l98 7FFE              __CFG_BORV$3 000000  
+                    l324 7E0C                      l721 7E62                      l731 7E88  
+                    l803 7F38                      l725 7E6E                      l741 7E9C  
+                    l733 7E8C                      l743 7EA0                      l735 7E90  
+                    l745 7EA4                      l737 7E94                      l753 7EB2  
+                    l747 7EA8                      l739 7E98                      l749 7EAC  
+                    l791 7EFC                      u177 7E12             __CFG_BOR$OFF 000000  
+                    wreg 000FE8             __CFG_FOSC$HS 000000             __CFG_LVP$OFF 000000  
+           __CFG_WDT$OFF 000000                     _Num1 000B                     _Num2 000C  
+                   _Num3 000D                     _Num4 000E                     _main 7EF2  
+                   fsr2h 000FDA                     fsr1l 000FE1                     indf2 000FDF  
+                   fsr2l 000FD9                     start 0000            __CFG_IESO$OFF 000000  
+    Segment_init@Segment 0001            __CFG_MCLRE$ON 000000            __CFG_PLLDIV$5 000000  
+                  ?_main 0001                    _PORTD 000F83            __CFG_USBDIV$1 000000  
+                  _TRISD 000F95    __size_of_Delay10KTCYx 0016            __CFG_PWRT$OFF 000000  
+         __CFG_FCMEN$OFF 000000                    main@x 0009                    tablat 000FF5  
+                  status 000FD8           __CFG_ICPRT$OFF 000000         __end_of_Delay_s_ 7E0A  
+        __initialization 7E20             __end_of_main 7F6E             _Delay10KTCYx 7E0A  
+                 ??_main 0009            __activetblptr 000002          __CFG_CCP2MX$OFF 000000  
+             _NumDisplay 7E7E           __CFG_XINST$OFF 000000           __CFG_STVREN$ON 000000  
+     __size_of_Seq_count 0092             __pdataCOMRAM 000B                   tblptrh 000FF7  
+                 tblptrl 000FF6                   tblptru 000FF8               __accesstop 0060  
+__end_of__initialization 7E40          __CFG_PBADEN$OFF 000000         NumDisplay@Number 0003  
+          ?_Segment_init 0001           __pcstackCOMRAM 0001            Seq_count@ptr1 0001  
+          Seq_count@ptr2 0003            Seq_count@ptr3 0005            Seq_count@ptr4 0007  
+              ?_Delay_s_ 0001              ?_NumDisplay 0002        __end_of_Seq_count 8000  
+         ??_Segment_init 0001               ??_Delay_s_ 0003          __CFG_VREGEN$OFF 000000  
+                __Hparam 0000                  __Lparam 0000                  __pcinit 7E20  
+                __ramtop 0800      __size_of_NumDisplay 0074                  __ptext0 7EF2  
+                __ptext1 7F6E                  __ptext2 7E7E                  __ptext3 7E4A  
+                __ptext4 7E02                  __ptext5 7E0A     end_of_initialization 7E40  
+          __Lmediumconst 0000                  postdec1 000FE5                  postinc0 000FEE  
+              _PORTAbits 000F80     __end_of_Segment_init 7E7E                _TRISAbits 000F92  
+      NumDisplay@Segment 0002            __pidataCOMRAM 7DFE      start_initialization 7E20  
+      __size_of_Delay_s_ 0008             ??_NumDisplay 0003                _Seq_count 7F6E  
+       __CFG_LPT1OSC$OFF 000000       __end_of_NumDisplay 7EF2               ?_Seq_count 0001  
+          ?_Delay10KTCYx 0001    __size_of_Segment_init 0034             _Segment_init 7E4A  
+       __CFG_WDTPS$32768 000000           ??_Delay10KTCYx 0001                 _Delay_s_ 7E02  
+       Delay10KTCYx@unit 0002                copy_data0 7E34              ??_Seq_count 0009  
+               __Hrparam 0000                 __Lrparam 0000            __size_of_main 007C  
+  __CFG_CPUDIV$OSC1_PLL2 000000     __end_of_Delay10KTCYx 7E20  

@@ -1,0 +1,31 @@
+
+# 1 "counter.c"
+
+# 11
+void Seq_count(unsigned char*ptr1, unsigned char*ptr2, unsigned char*ptr3, unsigned char*ptr4)
+{
+--*ptr1;
+if(*ptr1==0xFF)
+{
+--*ptr2;
+*ptr1 = 9;
+if(*ptr2==0xFF)
+{
+--*ptr3;
+*ptr2=9;
+if(*ptr3==0xFF)
+{
+--*ptr4;
+*ptr3=9;
+if(*ptr4==0xFF)
+{
+*ptr4=9;
+}
+
+}
+
+}
+
+}
+
+}
